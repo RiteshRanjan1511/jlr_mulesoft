@@ -1,0 +1,23 @@
+#%RAML 1.0
+title: test-drive-api
+version: 0.1
+
+types:
+  TestDriveType: !include /test-drive-module/dateTypes/testDrivedataType.raml
+
+/leadDetails:
+  post:
+    body:
+      application/json:
+        type: TestDriveType
+        examples: !include /test-drive-module/examples/TestDriveCreateExample.raml
+    responses:
+      201:
+        body: 
+          application/json:
+            example: 
+              message: Test Drive booked for XYZ
+          
+
+
+

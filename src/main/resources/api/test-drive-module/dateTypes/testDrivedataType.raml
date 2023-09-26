@@ -1,0 +1,27 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+    preferredRetailer: string
+    salutation: 
+      enum: [ Mr, Ms ]
+    firstName: string
+    lastName: string
+    email: 
+     type: string
+     pattern: ^.+@.+\..+$
+     minLength: 3
+     maxLength: 320
+    phone: integer
+    preferredDateTime: datetime-only
+    emailConsent: boolean
+    phoneConsent: boolean
+    SMSConsent: boolean
+    market: string
+    modelOfInterest : string
+    address:
+      type: object
+      properties:
+        countryCode : string
+      
+      
